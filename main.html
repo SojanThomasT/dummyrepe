@@ -55,8 +55,8 @@
                                     <input type="date" id="dob" required>
                                 </div>
                                 <div class="form-inline">
-                                    <label for="email2">Enter Your Name</label>
-                                    <input type="email" id="email2" required autocomplete="email">
+                                    <label for="email">Enter Your Name</label>
+                                    <input type="email" id="email" required>
                                 </div>
                                 <div class="form-inline">
                                     <label for="phno">Enter Your Name</label>
@@ -67,12 +67,12 @@
                                     <textarea id="ads" required></textarea>
                                 </div>
                                 <div class="form-inline">
-                                    <label for="psd2">Created Password</label>
-                                    <input type="password" id="psd2" required autocomplete="current-password">
+                                    <label for="psd">Created Password</label>
+                                    <input type="password" id="psd" required>
                                 </div>
                                 <div class="form-inline">
                                     <label for="repsd">Confirm Password</label>
-                                    <input type="password" id="repsd" required autocomplete="current-password">
+                                    <input type="password" id="repsd" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Create User</button>
                             </form>
@@ -83,12 +83,12 @@
                             <h2>Signin Page</h2>
                             <form action="">
                                 <div class="form-inline">
-                                    <label for="email1">Enter Your Registered Email</label>
-                                    <input type="email" id="email1" required autocomplete="email">
+                                    <label for="email">Enter Your Registered Email</label>
+                                    <input type="email" id="email" required>
                                 </div>
                                 <div class="form-inline">
-                                    <label for="psd1">Enter Your Password</label>
-                                    <input type="password" id="psd1" required autocomplete="current-password">
+                                    <label for="psd">Enter Your Password</label>
+                                    <input type="password" id="psd" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Sign In</button>
                             </form>
@@ -100,7 +100,27 @@
                                 <!-- Toggle Buttons -->
                                 <button class="btn btn-primary" id="s-in" data-toggle="collapse" data-target=".signin">Sign In</button>
                                 <button class="btn btn-primary" id="s-up" data-toggle="collapse" data-target=".signup">Sign Up</button>
-                                
+                                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                <script>
+                                    // Get references to the button and the element to toggle
+                                    const toggleButton1 = document.getElementById("s-up");
+                                    const elementToToggle1 = document.getElementById("signup");
+
+                                    // Add a click event listener to the button
+                                    toggleButton1.addEventListener("click", function() {
+                                        // Toggle the "hidden" class on the element
+                                        elementToToggle1.classList.toggle("signup");
+                                    });
+                                    // Get references to the button and the element to toggle
+                                    const toggleButton2 = document.getElementById("s-in");
+                                    const elementToToggle2 = document.getElementById("signin");
+
+                                    // Add a click event listener to the button
+                                    toggleButton2.addEventListener("click", function() {
+                                        // Toggle the "hidden" class on the element
+                                        elementToToggle2.classList.toggle("signin");
+                                    });
+                                </script>
                                 
 
                             </div>
@@ -111,25 +131,4 @@
 
         </div>
 </body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Get references to the button and the element to toggle
-        const toggleButton1 = document.getElementById("s-up");
-        const elementToToggle1 = document.getElementById("signup");
-
-        // Add a click event listener to the button
-        toggleButton1.addEventListener("click", function() {
-            // Toggle the "hidden" class on the element
-            elementToToggle1.classList.toggle("show");
-        });
-        // Get references to the button and the element to toggle
-        const toggleButton2 = document.getElementById("s-in");
-        const elementToToggle2 = document.getElementById("signin");
-
-        // Add a click event listener to the button
-        toggleButton2.addEventListener("click", function() {
-            // Toggle the "hidden" class on the element
-            elementToToggle2.classList.toggle("show");
-        });
-    </script>
 </html>
