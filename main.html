@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap linking-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .bg-setup{
+            background-image: url(./images/bg-set.png);
+            margin: 0;
+            padding: 0;
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Fixed background scrolling */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            height: 100vh; /* Set the body height to 100vh for full viewport height */
+            width: 100vw; /* Set the body width to 100vw for full viewport width */
+            z-index: -10;
+            
+        }
+        .overlay{
+            background: #999;
+            width:100vw;
+            height:100vh;
+            margin:0;
+            padding:0;
+            opacity:0.75;
+            z-index: -5
+        }
+    </style>
+</head>
+<body>
+        <div class=" bg-setup">
+            <div class="overlay">
+                <div class="row" style="z-index: 10;">
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" style="display:none">
+                        <div class="signup" id="signup">
+                            <h2>Sign up Page</h2>
+                            <form action="">
+                                <div class="form-inline">
+                                    <label for="name">Enter Your Name</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div class="form-inline">
+                                    <label for="age">Enter Your Name</label>
+                                    <input type="number" id="age" required>
+                                </div>
+                                <div class="form-inline">
+                                    <label for="dob">Enter Your Name</label>
+                                    <input type="date" id="dob" required>
+                                </div>
+                                <div class="form-inline">
+                                    <label for="email2">Enter Your Name</label>
+                                    <input type="email" id="email2" required autocomplete="email">
+                                </div>
+                                <div class="form-inline">
+                                    <label for="phno">Enter Your Name</label>
+                                    <input type="number" id="phno" required>
+                                </div>
+                                <div class="form-inline">
+                                    <label for="ads">Enter Your Name</label>
+                                    <textarea id="ads" required></textarea>
+                                </div>
+                                <div class="form-inline">
+                                    <label for="psd2">Created Password</label>
+                                    <input type="password" id="psd2" required autocomplete="current-password">
+                                </div>
+                                <div class="form-inline">
+                                    <label for="repsd">Confirm Password</label>
+                                    <input type="password" id="repsd" required autocomplete="current-password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Create User</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" style="display:none">
+                        <div class="signin">
+                            <h2>Signin Page</h2>
+                            <form action="">
+                                <div class="form-inline">
+                                    <label for="email1">Enter Your Registered Email</label>
+                                    <input type="email" id="email1" required autocomplete="email">
+                                </div>
+                                <div class="form-inline">
+                                    <label for="psd1">Enter Your Password</label>
+                                    <input type="password" id="psd1" required autocomplete="current-password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign In</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="toogle">
+                        <div class="row">
+                            <div class="col">
+                                <!-- Toggle Buttons -->
+                                <button class="btn btn-primary" id="s-in" data-toggle="collapse" data-target=".signin">Sign In</button>
+                                <button class="btn btn-primary" id="s-up" data-toggle="collapse" data-target=".signup">Sign Up</button>
+                                
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Get references to the button and the element to toggle
+        const toggleButton1 = document.getElementById("s-up");
+        const elementToToggle1 = document.getElementById("signup");
+
+        // Add a click event listener to the button
+        toggleButton1.addEventListener("click", function() {
+            // Toggle the "hidden" class on the element
+            elementToToggle1.classList.toggle("show");
+        });
+        // Get references to the button and the element to toggle
+        const toggleButton2 = document.getElementById("s-in");
+        const elementToToggle2 = document.getElementById("signin");
+
+        // Add a click event listener to the button
+        toggleButton2.addEventListener("click", function() {
+            // Toggle the "hidden" class on the element
+            elementToToggle2.classList.toggle("show");
+        });
+    </script>
+</html>
